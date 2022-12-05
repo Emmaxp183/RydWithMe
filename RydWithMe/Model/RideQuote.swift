@@ -13,13 +13,13 @@ class RideQuote{
     let name:String
     let capacity:String
     let price:Double
-    let datte:Date
+    let time:Date
     
     init(thumbnail: String, name: String, capacity: String, price: Double, datte: Date) {
         self.thumbnail = thumbnail
         self.name = name
         self.capacity = capacity
         self.price = price
-        self.datte = datte
+        self.time = datte
     }
 }

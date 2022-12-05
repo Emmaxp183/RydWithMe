@@ -10,14 +10,13 @@ import Foundation
 class Location:Codable{
     var title:String
     var subtitle:String
-    var latitude:Double
-    var longtitude:Double
+    var lat:Double
+    var lng:Double
     
-    init(title: String, subtitle: String, lontitude: Double, longtitude: Double) {
+    init(title: String, subtitle: String, lat: Double, lng: Double) {
         self.title = title
         self.subtitle = subtitle
-        self.latitude = lontitude
-        self.longtitude = longtitude
+        self.lat = lat
+        self.lng = lng
     }
-    
 }
