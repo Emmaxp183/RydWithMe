@@ -56,15 +56,47 @@
 		FA6201B3293E20810019B380 /* RydWithMe */ = {
 			isa = PBXGroup;
 			children = (
-				FA6201B4293E20810019B380 /* AppDelegate.swift */,
-				FA6201B6293E20810019B380 /* SceneDelegate.swift */,
-				FA6201B8293E20810019B380 /* ViewController.swift */,
-				FA6201BA293E20810019B380 /* Main.storyboard */,
+				FA6201CB293E20C60019B380 /* Supporting Files */,
+				FA6201CA293E20B50019B380 /* Controller */,
+				FA6201C9293E20A40019B380 /* View */,
+				FA6201C8293E20940019B380 /* Model */,
 				FA6201BD293E20820019B380 /* Assets.xcassets */,
-				FA6201BF293E20820019B380 /* LaunchScreen.storyboard */,
 				FA6201C2293E20820019B380 /* Info.plist */,
 			);
 			path = RydWithMe;
+			sourceTree = "<group>";
+		};
+		FA6201C8293E20940019B380 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA6201C9293E20A40019B380 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6201BA293E20810019B380 /* Main.storyboard */,
+				FA6201BF293E20820019B380 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA6201CA293E20B50019B380 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6201B8293E20810019B380 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA6201CB293E20C60019B380 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA6201B4293E20810019B380 /* AppDelegate.swift */,
+				FA6201B6293E20810019B380 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
