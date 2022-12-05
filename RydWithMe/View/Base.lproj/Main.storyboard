@@ -9,20 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RydWithMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RydWithMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDy-ED-7Ut">
-                                <rect key="frame" x="20" y="491.66666666666669" width="335" height="34.333333333333314"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <rect key="frame" x="20" y="491.66666666666669" width="335" height="40.000000000000057"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8Ct-g2-kAj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="            Search destination">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1be-iv-8RQ">
@@ -32,11 +35,11 @@
                                 </constraints>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D2V-Qy-60u">
-                                <rect key="frame" x="0.0" y="536" width="375" height="276"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D2V-Qy-60u">
+                                <rect key="frame" x="0.0" y="541.66666666666663" width="375" height="270.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="79" id="BP8-o3-Azd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Locationcell" rowHeight="79" id="BP8-o3-Azd" customClass="LocationCell" customModule="RydWithMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BP8-o3-Azd" id="Gub-TL-Dhc">
@@ -80,8 +83,16 @@
                                                 <constraint firstAttribute="bottom" secondItem="x5b-vQ-jkh" secondAttribute="bottom" constant="10" id="haX-zz-ofL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLine1" destination="3K9-h6-AXv" id="bee-8y-Fjh"/>
+                                            <outlet property="addressLine2" destination="kWm-ob-YZd" id="uf2-5x-Sdz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hC8-Ng-Uxy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Biy-ci-t7f"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xax-WD-0AB">
                                 <rect key="frame" x="20" y="430" width="335" height="51.666666666666686"/>
@@ -101,7 +112,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="xI3-NY-422">
-                                <rect key="frame" x="28" y="496.33333333333331" width="25" height="24.999999999999943"/>
+                                <rect key="frame" x="28" y="499.33333333333331" width="25" height="24.999999999999943"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JF7-h4-iD2"/>
                                     <constraint firstAttribute="width" constant="25" id="TFZ-XI-OuO"/>
@@ -128,10 +139,13 @@
                             <constraint firstAttribute="bottom" secondItem="D2V-Qy-60u" secondAttribute="bottom" id="tFM-2h-i4E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchButton" destination="aDy-ED-7Ut" id="ejs-06-UHU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="-4"/>
+            <point key="canvasLocation" x="-254" y="5"/>
         </scene>
     </scenes>
     <resources>
@@ -139,9 +153,6 @@
         <image name="search" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
