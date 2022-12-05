@@ -16,6 +16,8 @@
 		FA6201CD293E22290019B380 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201CC293E22290019B380 /* Location.swift */; };
 		FA6201CF293E23010019B380 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201CE293E23010019B380 /* LocationService.swift */; };
 		FA6201D1293E24D70019B380 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = FA6201D0293E24D70019B380 /* locations.json */; };
+		FA6201D4293E2EB20019B380 /* RideQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201D3293E2EB20019B380 /* RideQuote.swift */; };
+		FA6201D6293E37130019B380 /* RideQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201D5293E37130019B380 /* RideQuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA6201CC293E22290019B380 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FA6201CE293E23010019B380 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		FA6201D0293E24D70019B380 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		FA6201D3293E2EB20019B380 /* RideQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuote.swift; sourceTree = "<group>"; };
+		FA6201D5293E37130019B380 /* RideQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +79,10 @@
 		FA6201C8293E20940019B380 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA6201D2293E2E7A0019B380 /* Services */,
 				FA6201D0293E24D70019B380 /* locations.json */,
 				FA6201CC293E22290019B380 /* Location.swift */,
-				FA6201CE293E23010019B380 /* LocationService.swift */,
+				FA6201D3293E2EB20019B380 /* RideQuote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +111,15 @@
 				FA6201B6293E20810019B380 /* SceneDelegate.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA6201D2293E2E7A0019B380 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA6201CE293E23010019B380 /* LocationService.swift */,
+				FA6201D5293E37130019B380 /* RideQuoteService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +196,10 @@
 			files = (
 				FA6201B9293E20810019B380 /* ViewController.swift in Sources */,
 				FA6201B5293E20810019B380 /* AppDelegate.swift in Sources */,
+				FA6201D6293E37130019B380 /* RideQuoteService.swift in Sources */,
 				FA6201CF293E23010019B380 /* LocationService.swift in Sources */,
 				FA6201CD293E22290019B380 /* Location.swift in Sources */,
+				FA6201D4293E2EB20019B380 /* RideQuote.swift in Sources */,
 				FA6201B7293E20810019B380 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
