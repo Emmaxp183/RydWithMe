@@ -13,6 +13,9 @@
 		FA6201BC293E20810019B380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6201BA293E20810019B380 /* Main.storyboard */; };
 		FA6201BE293E20820019B380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6201BD293E20820019B380 /* Assets.xcassets */; };
 		FA6201C1293E20820019B380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6201BF293E20820019B380 /* LaunchScreen.storyboard */; };
+		FA6201CD293E22290019B380 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201CC293E22290019B380 /* Location.swift */; };
+		FA6201CF293E23010019B380 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201CE293E23010019B380 /* LocationService.swift */; };
+		FA6201D1293E24D70019B380 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = FA6201D0293E24D70019B380 /* locations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FA6201BD293E20820019B380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6201C0293E20820019B380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6201C2293E20820019B380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6201CC293E22290019B380 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FA6201CE293E23010019B380 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		FA6201D0293E24D70019B380 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 		FA6201C8293E20940019B380 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA6201D0293E24D70019B380 /* locations.json */,
+				FA6201CC293E22290019B380 /* Location.swift */,
+				FA6201CE293E23010019B380 /* LocationService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			files = (
 				FA6201C1293E20820019B380 /* LaunchScreen.storyboard in Resources */,
 				FA6201BE293E20820019B380 /* Assets.xcassets in Resources */,
+				FA6201D1293E24D70019B380 /* locations.json in Resources */,
 				FA6201BC293E20810019B380 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +182,8 @@
 			files = (
 				FA6201B9293E20810019B380 /* ViewController.swift in Sources */,
 				FA6201B5293E20810019B380 /* AppDelegate.swift in Sources */,
+				FA6201CF293E23010019B380 /* LocationService.swift in Sources */,
+				FA6201CD293E22290019B380 /* Location.swift in Sources */,
 				FA6201B7293E20810019B380 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
