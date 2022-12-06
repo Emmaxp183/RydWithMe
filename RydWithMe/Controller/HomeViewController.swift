@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CLLocationManagerDelegate {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CLLocationManagerDelegate,MKMapViewDelegate {
   
 
     @IBOutlet weak var searchButton: UIButton!
@@ -60,5 +61,12 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if status == .authorizedWhenInUse{
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let distance = 200.0
+        let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: distance, longitudinalMeters: distance)
+        mapView.setRegion(region, animated: true)
     }
 }

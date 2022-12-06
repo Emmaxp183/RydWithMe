@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="height" constant="420" id="cqN-Rr-xEL"/>
                                 </constraints>
                                 <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ajD-Id-ztJ"/>
+                                </connections>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D2V-Qy-60u">
                                 <rect key="frame" x="0.0" y="541.66666666666663" width="375" height="270.33333333333337"/>
