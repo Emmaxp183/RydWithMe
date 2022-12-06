@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import CoreLocation
 
-class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CLLocationManagerDelegate {
   
 
     @IBOutlet weak var searchButton: UIButton!
     var Locations = [Location]()
+    //Propertier for the map
+    var locationManager:CLLocationManager!
+    var currentUserLocation:Location!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,14 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         searchButton.layer.shadowColor = UIColor.black.cgColor
         searchButton.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         searchButton.layer.shadowOpacity = 0.5
-
+        //Map
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            locationManager.startUpdatingLocation()
+        }
     }
     
 //Tabel View
@@ -38,6 +49,16 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
-
-
+//Map
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let firstLocation = locations.first!
+        currentUserLocation = Location(title: "Current Location", subtitle: "", lat: firstLocation.coordinate.latitude, lng: firstLocation.coordinate.longitude)
+        locationManager.startUpdatingLocation()
+    }
+   
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse{
+            locationManager.startUpdatingLocation()
+        }
+    }
 }
