@@ -10,8 +10,8 @@ import CoreLocation
 import MapKit
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CLLocationManagerDelegate,MKMapViewDelegate {
-  
-
+    
+    
     @IBOutlet weak var searchButton: UIButton!
     var Locations = [Location]()
     //Propertier for the map
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
     }
     
-//Tabel View
+    //Tabel View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Locations.count
     }
@@ -50,13 +50,13 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
-//Map
+    //Map
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let firstLocation = locations.first!
         currentUserLocation = Location(title: "Current Location", subtitle: "", lat: firstLocation.coordinate.latitude, lng: firstLocation.coordinate.longitude)
         locationManager.startUpdatingLocation()
     }
-   
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse{
             locationManager.startUpdatingLocation()
@@ -68,5 +68,41 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let distance = 200.0
         let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: distance, longitudinalMeters: distance)
         mapView.setRegion(region, animated: true)
+        
+        
+        //Proprties of map anotaations
+        let offset = 0.00075
+        let lat = userLocation.coordinate.latitude
+        let lng = userLocation.coordinate.longitude
+        let coordinateOne = CLLocationCoordinate2D(latitude: lat - offset, longitude: lng - offset)
+        let coordinateTwo = CLLocationCoordinate2D(latitude: lat, longitude: lng + offset)
+        let coordinateThree = CLLocationCoordinate2D(latitude: lat, longitude: lng - offset)
+        
+        //Adding vehicle Anotation on the map
+        mapView.addAnnotations([
+            VehicleAnotation(coordinate: coordinateOne),
+            VehicleAnotation(coordinate: coordinateTwo),
+            VehicleAnotation(coordinate: coordinateThree)
+        ])
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        //Constant properties for reuseIdentifier
+        let reuseIdentifier = "vehicle"
+        let VehicleImage = "car"
+       
+        if annotation is MKUserLocation{
+            return nil
+        }
+        //Custom annotation view with vehicle image
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+        if annotationView == nil{
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier:reuseIdentifier)
+        }else{
+            annotationView?.annotation = annotation
+        }
+        annotationView?.image = UIImage(named: VehicleImage)
+        //Rotation of the vehicle
+        annotationView?.transform = CGAffineTransform(rotationAngle: CGFloat(arc4random_uniform(360) * 180) / CGFloat.pi)
+        return annotationView
     }
 }

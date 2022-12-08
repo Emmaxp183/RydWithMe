@@ -20,6 +20,7 @@
 		FA6201D6293E37130019B380 /* RideQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6201D5293E37130019B380 /* RideQuoteService.swift */; };
 		FA8E52B6293E7235008D26E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E52B5293E7235008D26E9 /* HomeViewController.swift */; };
 		FA8E52B8293E769D008D26E9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E52B7293E769D008D26E9 /* LocationCell.swift */; };
+		FA9764F22940A293002AE13F /* VehicleAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9764F12940A293002AE13F /* VehicleAnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA6201D5293E37130019B380 /* RideQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuoteService.swift; sourceTree = "<group>"; };
 		FA8E52B5293E7235008D26E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA8E52B7293E769D008D26E9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		FA9764F12940A293002AE13F /* VehicleAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				FA6201D0293E24D70019B380 /* locations.json */,
 				FA6201CC293E22290019B380 /* Location.swift */,
 				FA6201D3293E2EB20019B380 /* RideQuote.swift */,
+				FA9764F12940A293002AE13F /* VehicleAnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				FA8E52B6293E7235008D26E9 /* HomeViewController.swift in Sources */,
 				FA8E52B8293E769D008D26E9 /* LocationCell.swift in Sources */,
 				FA6201B7293E20810019B380 /* SceneDelegate.swift in Sources */,
+				FA9764F22940A293002AE13F /* VehicleAnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
