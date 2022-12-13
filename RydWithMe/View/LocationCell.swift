@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class LocationCell: UITableViewCell {
 
@@ -15,5 +16,10 @@ class LocationCell: UITableViewCell {
     func updateView(location:Location){
         addressLine1.text = location.title
         addressLine2.text = location.subtitle
+    }
+    
+    func updateView(searchResult:MKLocalSearchCompletion){
+        addressLine1.text = searchResult.title
+        addressLine2.text = searchResult.subtitle
     }
 }

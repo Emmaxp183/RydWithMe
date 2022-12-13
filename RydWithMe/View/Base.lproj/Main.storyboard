@@ -212,6 +212,9 @@
                                                         <rect key="frame" x="0.0" y="25" width="300" height="18.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Evk-mB-DyH" id="Nni-Li-kfV"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -274,8 +277,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Evk-mB-DyH" id="ad8-ho-jFP"/>
-                                    <outlet property="delegate" destination="Evk-mB-DyH" id="K5k-mO-gA9"/>
+                                    <outlet property="dataSource" destination="Evk-mB-DyH" id="dSV-HZ-LyJ"/>
+                                    <outlet property="delegate" destination="Evk-mB-DyH" id="Vmw-jY-ych"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -291,6 +294,10 @@
                             <constraint firstItem="MXt-te-hpy" firstAttribute="leading" secondItem="Dj9-sL-aJb" secondAttribute="leading" id="nD9-RK-PZj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dropOffTextField" destination="ssf-67-5yD" id="PJb-QH-6Wh"/>
+                        <outlet property="tableview" destination="MXt-te-hpy" id="qKK-7B-H0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nu2-0o-6he" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

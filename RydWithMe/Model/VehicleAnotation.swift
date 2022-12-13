@@ -8,7 +8,7 @@
 import MapKit
 
 
-class VehicleAnotation:NSObject,MKAnnotation{
+class VehicleAnotation: NSObject,MKAnnotation{
     var coordinate: CLLocationCoordinate2D
     
     init(coordinate: CLLocationCoordinate2D) {
